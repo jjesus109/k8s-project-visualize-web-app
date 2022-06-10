@@ -3,6 +3,10 @@
 This repo is a simple web app to register data from a user and send to an API
 
 
+## CI/CD
+
+docker build -t kubernetes-course:visulization-app-[version] -f Dockerfile .
+docker tag  kubernetes-course:visulization-app-[version] jesu11s/kubernetes-course:visulization-app-[version]
 
 ## Available Scripts
 
