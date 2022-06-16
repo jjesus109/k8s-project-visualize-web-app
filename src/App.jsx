@@ -2,8 +2,8 @@ import React, { Fragment, useState, useEffect } from "react";
 
 import FormResults  from './components/FormResults';
 
-
 export function App() {
+    
     const [results, setResults] = useState([])
 
     useEffect(() => {
@@ -12,7 +12,13 @@ export function App() {
     useEffect(() => {
     }, [results])
     const fetchComments=async()=>{
-        await fetch('http://localhost:8000/app/v1/forms')
+        const url = 'http://gsus-apis'
+        await fetch(url+'/app/v1/forms',
+        
+        {
+        method: 'GET',
+        mode: 'cors',
+        })
                 .then(response => response.json())
                 .then(
                     response => {
